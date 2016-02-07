@@ -1,0 +1,31 @@
+<div>
+  <header>
+    <h2>{{ i18n.t('page.projects.header') }}</h2>
+    <p>{{ i18n.t('page.projects.caption') }}</p>
+  </header>
+
+  <div>
+    <div ng-repeat="project in projectsCtrl.getList() | orderBy:'-updatedAt'"
+         class='col-md-6 col-sm-12 card'>
+      <header>
+        <h4>
+          <a ng-href='{{ project.urls.repository }}' target='_blank'>{{ project.name }}</a>
+          <aside>
+            <span ng-if='project.fork'><i class='fa fa-code-fork'></i></span>
+            <span ng-if='project.counts.watchers > 0'><i class='fa fa-eye'></i>{{ project.counts.watchers }}</span>
+            <span ng-if='project.counts.stargazers > 0'><i class='fa fa-star'></i>{{ project.counts.stargazers }}</span>
+          </aside>
+        </h4>
+      </header>
+
+      <main>
+        {{ project.description }}
+      </main>
+
+      <footer>
+        <span>{{ projectsCtrl.formatDate(project.createdAt, 'shared.created_at') }}</span>
+        <span>{{ projectsCtrl.formatDate(project.updatedAt, 'shared.updated_at') }}</span>
+      </footer>
+    </div>
+  </div>
+</div>

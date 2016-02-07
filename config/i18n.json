@@ -1,0 +1,41 @@
+{
+  "en-US": {
+    "header": {
+      "title": "Elerium"
+    },
+    "topbar": {
+      "home": "Home",
+      "projects": "Projects"
+      },
+    "bio": {
+      "presentation": [
+        "Oh... Hello there!",
+        "You should definitely write some text here!"
+      ]
+    },
+    "page": {
+      "home": {
+        "header": "Home",
+        "caption": [
+          "TODO: Write some instructions here."
+        ]
+      },
+      "projects": {
+        "header": "Projects",
+        "caption": []
+      }
+    },
+    "footer": [
+      "This Web page is based on the <a target='_blank' href='http://github.com/mbuffa/elerium'>Elerium</a> template written by Maxime Buffa.",
+      "<br />Please feel free to fork it on Github :)"
+    ],
+    "locales": {
+      "en-US": "English"
+    },
+    "shared": {
+      "created_at": "Created at %{} on %{}",
+      "updated_at": "Updated at %{} on %{}",
+      "fork": "Fork"
+    }
+  }
+}

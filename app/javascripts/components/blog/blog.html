@@ -1,0 +1,14 @@
+<div>
+
+  <header>
+    <h2>{{ i18n.t('page.home.header') }}</h2>
+    <p>{{ i18n.t('page.home.caption') }}</p>
+  </header>
+
+  <div ng-repeat="post in blogCtrl.getPosts() | orderBy:'-name'"
+       class='post'>
+    <div ng-bind-html="post.content"></div>
+
+    <hr />
+  </div>
+</div>

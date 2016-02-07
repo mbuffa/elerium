@@ -1,0 +1,47 @@
+<div>
+  <div ng-hide='mainCtrl.isLoaded()'>
+    <main class='col-md-12 col-sm-12 loading-spinner'>
+      <div class='vertical-center'>
+        <i class='fa fa-spinner fa-spin fa-4x'></i>
+      </div>
+    </main>
+  </div>
+
+  <div>
+    <aside ng-if='mainCtrl.isLoaded()'
+           class='col-md-2 col-sm-12'>
+      <div class='locale-switch text-center'>
+        <a ng-repeat='locale in mainCtrl.getAvailableLocales()'
+           ng-click='mainCtrl.setLocale(locale)'
+           ng-class='mainCtrl.getLocaleCssClass(locale)'>{{ i18n.t('locales.' + locale) }}</a>
+      </div>
+
+      <div bio></div>
+    </aside>
+
+    <main id='content' class='col-md-10 col-sm-12'>
+      <header ng-if='mainCtrl.isLoaded()'
+              class='header row'>
+        <h1 class='text-center'>{{ i18n.t('header.title') }}</h1>
+
+        <div id='topbar'>
+          <ul class='nav navbar-nav'>
+            <li><a href='#/'
+                   ng-class="mainCtrl.getNavCssClass('/')">{{ i18n.t('topbar.home') }}</a></li>
+            <li><a href='#/projects'
+                   ng-class="mainCtrl.getNavCssClass('/projects')">{{ i18n.t('topbar.projects') }}</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div class='row'>
+        <div ng-view></div>
+      </div>
+
+      <footer ng-if='mainCtrl.isLoaded()'
+              class='row text-center'>
+        <p ng-bind-html="mainCtrl.getFooterTranslation()"></p>
+      </footer>
+    </main>
+  </div>
+</div>

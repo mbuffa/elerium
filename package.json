@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "private": false,
+  "name": "elerium",
+  "description": "Personal page template fully integrated with your Git workflow and GitHub",
+  "repository": "https://github.com/mbuffa/elerium",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "1.5.0-rc.1",
+    "angular-route": "1.5.0-rc.1",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "http-server": "^0.6.1",
+    "showdown": "^1.3.0"
+  },
+  "scripts": {
+    "postinstall": "bundle",
+    "prestart": "sh scripts/prestart.sh",
+    "start": "http-server -a 0.0.0.0 -p 8000 -c-1"
+  }
+}

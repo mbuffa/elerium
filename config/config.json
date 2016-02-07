@@ -1,0 +1,15 @@
+{
+  "github": {
+    "user": {
+      "name": "your-github-user-name"
+    },
+    "posts": {
+      "repo": "repo-short-name",
+      "branch": "repo-branch",
+      "path": "repo-file-path"
+    },
+    "projects": {
+      "except": "array-of-exclkuded-repos-short-names"
+    }
+  }
+}
